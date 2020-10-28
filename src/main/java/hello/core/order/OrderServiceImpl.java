@@ -22,4 +22,9 @@ public class OrderServiceImpl implements OrderService{
         int discountPrice = discountPolicy.disCount(member, itemPrice); // 할인 정책에 회원을 넘겨 할인금액을 가져온다
         return new Order(memberId,itemName,itemPrice,discountPrice); // 해당 정보를 리턴한다.
     }
+
+    // Test 용
+    public MemberRepository getMemberRepository(){
+        return memberRepository;
+    }
 }
